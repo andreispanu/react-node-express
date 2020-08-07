@@ -3,6 +3,12 @@ const app = express();
 const port = 4000;
 const cors = require("cors");
 
+//Pull fake db data
+const data = require('./storage/db');
+
+var async = require('express-async-await')
+var fetch = require('node-fetch')
+
 /*****************************************
  * CORS WHITELIST & OPTIONS
  *****************************************/
@@ -35,11 +41,8 @@ app.use(async (req, res, next) => {
   next();
 });
 
-app.get("/", (req, res) => res.send("Api running"));
-
-app.get('/hello', (req, res) => {
-  res.send('Hello World!')
-})
+// app.get("/", (req, res) => res.send("Api running"));
+app.get("/", (req, res) => res.send(data));
 
 app.get("/test", (req, res, next) => {
   res.json(["Tony", "Lisa", "Michael", "Ginger", "Food"]);
