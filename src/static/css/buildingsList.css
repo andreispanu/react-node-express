@@ -1,0 +1,132 @@
+:root {
+  --text: #3e3f42;
+  --light: #9ea0a5;
+  --blue: #1665d8;
+  --divider-light: #eaedf3;
+  --default-padding: 8px;
+}
+
+p {
+  font-family: Roboto;
+  margin: 0;
+}
+
+.buildings-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.building-item {
+  padding: var(--default-padding);
+  max-width: 255px;
+}
+
+.building-image img{
+  width: 100%;
+}
+
+.building-name {
+  height: 24px;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: var(--text);
+}
+
+.building-address {
+  height: 44px;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: var(--light);
+}
+
+.building-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-top: var(--default-padding);
+}
+
+.building-users {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.building-users span{
+  padding-left: var(--default-padding);
+}
+
+.building-offices {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: var(--light);
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+}
+
+/* ------- */
+.divider {
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: var(--divider-light)
+}
+
+.building-status {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: var(--light);
+  padding-top: var(--default-padding);
+}
+
+.building-status-rent {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+}
+
+.building-status-price {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.56;
+  letter-spacing: normal;
+  text-align: right;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+

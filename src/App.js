@@ -10,70 +10,45 @@ import {
 import ContactUs from "./containers/ContactUs";
 import Dashboard from "./containers/Dashboard";
 
+// CSS
+import normalizer from "./static/css/normalizer.css";
+
 
 function App() {
-
   const [pulledData, setPulledData] = React.useState({})
 
-  // const callAPI = () => {
-  //   fetch("http://localhost:3000/")
-  //     .then(res => setPulledData(res))
-  //     .then(console.log(pulledData))
-  // }
-
-
-  function ooIfoundData() {
-    return fetch("/")
-  }
-
-  const ooIprocessData = async () => {
-    const responseData = await ooIfoundData()
-    setPulledData(responseData)
-  }
+  const callAPI = () => {
+    fetch("http://localhost:4000/buildings")
+      .then((res) => {
+        return res.json();
+      })
+      .then((response) => {
+        setPulledData(response);
+      });
+  };
 
   useEffect(() => {
-    ooIprocessData()
+    callAPI()
   }, []);
 
-  const [data, setData] = React.useState({
-    buildings: {
-      item: [
-        {
-          id: "1",
-          buildingName: "Bauhaus Archive",
-          buildingAddress1: "7246 Woodland Rd.",
-          buildingAddress2: "Waukesha, WI 53186",
-          users: "906",
-          offices: "36",
-          price: "75"
-        },
-        {
-          id: "2",
-          buildingName: "Lotus Temple",
-          buildingAddress1: "164 S. Carson Court",
-          buildingAddress2: "Newport News, VA 23601",
-          users: "876",
-          offices: "20",
-          price: "65"
-        }
-      ]
-    },
-  });
-
-  return (
-    <DashboardContext.Provider value={data}>
-      <Router>
-        <Switch>
-          <Route path="/contact">
-            <ContactUs />
-          </Route>
-          <Route path="/">
-            <Dashboard />
-          </Route>
-        </Switch>
-      </Router>
-    </DashboardContext.Provider>
-  );
+  if (pulledData !== {}) {
+    return (
+      <DashboardContext.Provider value={pulledData}>
+        <div className="body-container">
+          <Router>
+            <Switch>
+              <Route path="/contact">
+                <ContactUs />
+              </Route>
+              <Route path="/">
+                <Dashboard />
+              </Route>
+            </Switch>
+          </Router>
+        </div>
+      </DashboardContext.Provider>
+    );
+  }
 }
 
 export default App;

@@ -1,14 +1,14 @@
 import React from 'react';
-import Menu from './Menu';
+import Navigation from './Navigation';
 
 const Dashboard = () => {
   return (
     <div className="main">
       <div className="left">
-        <Menu />
+        <Navigation />
       </div>
       <div className="right">
-        <p>right side</p>
+
       </div>
     </div>
   )

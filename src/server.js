@@ -3,11 +3,38 @@ const app = express();
 const port = 4000;
 const cors = require("cors");
 
-//Pull fake db data
-const data = require('./storage/db');
+var fakeData = require("./storage/db");
 
-var async = require('express-async-await')
-var fetch = require('node-fetch')
+//Pull fake db data
+const data = {
+  buildings: {
+    item: [
+      {
+        id: "1",
+        image: "../static/images/1.png",
+        buildingName: "Bauhaus Archive",
+        buildingAddress1: "7246 Woodland Rd.",
+        buildingAddress2: "Waukesha, WI 53186",
+        users: "906",
+        offices: "36",
+        price: "75"
+      },
+      {
+        id: "2",
+        image: "../static/images/2.png",
+        buildingName: "Lotus Temple",
+        buildingAddress1: "164 S. Carson Court",
+        buildingAddress2: "Newport News, VA 23601",
+        users: "876",
+        offices: "20",
+        price: "65"
+      },
+    ]
+  },
+};
+
+var async = require("express-async-await");
+var fetch = require("node-fetch");
 
 /*****************************************
  * CORS WHITELIST & OPTIONS
@@ -20,7 +47,7 @@ let corsOptions = {
     } else {
       callback(new Error("Not allowed by CORS"));
     }
-  }
+  },
 };
 
 /***************************************************
@@ -41,13 +68,10 @@ app.use(async (req, res, next) => {
   next();
 });
 
-// app.get("/", (req, res) => res.send("Api running"));
-app.get("/", (req, res) => res.send(data));
-
-app.get("/test", (req, res, next) => {
-  res.json(["Tony", "Lisa", "Michael", "Ginger", "Food"]);
+app.get("/", (req, res) => res.send("Api running"));
+app.get("/buildings", (req, res, next) => {
+  res.send(data);
 });
-
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );

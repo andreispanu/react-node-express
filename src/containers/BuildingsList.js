@@ -1,98 +1,73 @@
 import React, { useState, useContext } from 'react';
 import { DashboardContext } from '../context/Context';
-
-import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
-import Typography from '@material-ui/core/Typography';
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1
-  },
-  paper: {
-    padding: theme.spacing(1)
-  },
-  buildingsContainer: {
-    display: "grid",
-    gridTemplateColumns: "1fr 1fr"
-  },
-  buildingItem: {
-    padding: theme.spacing(2)
-  },
-  buildingName: {
-    height: 24,
-    fontFamily: "Roboto",
-    fontSize: "16px",
-    fontWeight: 500,
-    fontStretch: "normal",
-    fontStyle: "normal",
-    lineHeight: 1.5,
-    letterSpacing: "normal",
-    color: "#3e3f42"
-  },
-  buildingAddress: {
-    color: "#9ea0a5",
-    fontSize: 14,
-    height: 44,
-    lineHeight: "22px",
-    fontFamily: "Roboto",
-  }
-}));
+// CSS
+import buildingsList from "../static/css/buildingsList.css";
+// SVG
+import { ReactComponent as Suitcase } from "../static/svg/suitcase.svg";
+import { ReactComponent as User } from "../static/svg/user.svg";
+
+// Hardcoded image ...
+import image1 from "../static/images/1.png";
 
 
 const BuildingsList = () => {
-  const classes = useStyles();
   const data = useContext(DashboardContext);
-
   const buildingsLoop = () => {
 
     const result = [];
-    if (data !== undefined) {
-      const buildings = data.buildings.item;
-
-      buildings.map(item => {
+    const buildings = data.buildings;
+    if (data.buildings !== undefined) {
+      buildings.item.map(item => {
         result.push(
-          <Grid item xs={12} className={classes.buildingItem} key={item.id}>
-            <div className={classes.buildingName}>
-              <Typography>{item.buildingName}</Typography>
+          <div className="building-item" key={item.id}>
+            <div className="building-image">
+              <img src={image1} alt={item.id} />
             </div>
-            <div className={classes.buildingAddress}>
-              <Typography>{item.buildingAddress1}</Typography>
-              <Typography>{item.buildingAddress2}</Typography>
+            <div className="building-name">
+              <p>{item.buildingName}</p>
             </div>
-            <Grid container>
-              <Grid item xs={12} sm={6} className="building-users">
-                <Typography>{item.users}</Typography>
-              </Grid>
-              <Grid item xs={12} sm={6} className="building-offices">
-                <Typography>{item.offices}</Typography>
-              </Grid>
-            </Grid>
-            <hr />
-            <Grid container>
-              <Grid item xs={12} sm={6} className="building-status-rent">
-                <Typography>For rent</Typography>
-              </Grid>
-              <Grid item xs={12} sm={6} className="building-status-price">
-                <Typography>£{item.price}/sqm</Typography>
-              </Grid>
-            </Grid>
-          </Grid>
+            <div className="building-address">
+              <p>{item.buildingAddress1}</p>
+              <p>{item.buildingAddress2}</p>
+            </div>
+            <div className="building-stats">
+              <div className="building-users">
+                <User /><span>{item.users}</span>
+              </div>
+              <div className="building-offices">
+                <Suitcase /><span>{item.offices} Offices</span>
+              </div>
+            </div>
+            <div className="divider" />
+            <div className="building-status">
+              <div className="building-status-rent">
+                <p>For rent</p>
+              </div>
+              <div className="building-status-price">
+                <p>£{item.price}/sqm</p>
+              </div>
+            </div>
+          </div>
         )
       })
-      return result;
     }
+
+
+
+
 
     return result;
   }
 
   return (
     <React.Fragment>
-      <Paper className={classes.paper}>
-        <div className={classes.buildingsContainer}>
+      <Paper>
+        <div className="buildings-container">
           {buildingsLoop()}
         </div>
+
       </Paper>
     </React.Fragment>
   )
