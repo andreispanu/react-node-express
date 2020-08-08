@@ -19,11 +19,17 @@ const BuildingsList = () => {
     const result = [];
     const buildings = data.buildings;
     if (data.buildings !== undefined) {
+
       buildings.item.map(item => {
+
+        console.log(item.image);
+
+        let pathToImage = item.image
+
         result.push(
           <div className="building-item" key={item.id}>
             <div className="building-image">
-              <img src={image1} alt={item.id} />
+              <img src={require('../static/images/' + item.id + '.png')} alt={item.id} />
             </div>
             <div className="building-name">
               <p>{item.buildingName}</p>

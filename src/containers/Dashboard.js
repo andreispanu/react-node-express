@@ -1,5 +1,6 @@
 import React from 'react';
 import Navigation from './Navigation';
+import BuildingsList from './BuildingsList';
 
 const Dashboard = () => {
   return (
@@ -8,7 +9,7 @@ const Dashboard = () => {
         <Navigation />
       </div>
       <div className="right">
-
+        <BuildingsList />
       </div>
     </div>
   )

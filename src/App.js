@@ -9,6 +9,7 @@ import {
 // Containers
 import ContactUs from "./containers/ContactUs";
 import Dashboard from "./containers/Dashboard";
+// import Navigation from
 
 // CSS
 import normalizer from "./static/css/normalizer.css";
@@ -35,18 +36,19 @@ function App() {
     return (
       <DashboardContext.Provider value={pulledData}>
         <div className="body-container">
+          <
           <Router>
             <Switch>
               <Route path="/contact">
-                <ContactUs />
-              </Route>
-              <Route path="/">
-                <Dashboard />
-              </Route>
+            <ContactUs />
+          </Route>
+          <Route path="/">
+            <Dashboard />
+          </Route>
             </Switch>
           </Router>
-        </div>
-      </DashboardContext.Provider>
+        </div >
+      </DashboardContext.Provider >
     );
   }
 }

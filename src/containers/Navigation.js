@@ -16,7 +16,6 @@ const Navigation = () => {
           <div className="navigation-header">
             <BuildingsIcon /> <span>Buildings</span>
           </div>
-
         </div>
         <div className="navigation-menu">
           <NavigationList />

@@ -11,7 +11,7 @@ const data = {
     item: [
       {
         id: "1",
-        image: "../static/images/1.png",
+        image: "./static/images/1.png",
         buildingName: "Bauhaus Archive",
         buildingAddress1: "7246 Woodland Rd.",
         buildingAddress2: "Waukesha, WI 53186",
@@ -21,7 +21,7 @@ const data = {
       },
       {
         id: "2",
-        image: "../static/images/2.png",
+        image: "./static/images/2.png",
         buildingName: "Lotus Temple",
         buildingAddress1: "164 S. Carson Court",
         buildingAddress2: "Newport News, VA 23601",
