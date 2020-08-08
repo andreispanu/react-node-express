@@ -8,13 +8,15 @@ import {
 
 // Containers
 import Navigation from "./containers/Navigation";
-import Header from "./components/Header/Header";
+import Header from "./containers/Header";
 import ContactUs from "./containers/ContactUs";
 import Buildings from "./containers/Buildings";
 
 // CSS
 import normalizer from "./static/css/normalizer.css";
 import app from "./static/css/app.css";
+import Map from './components/Map/Map';
+import Dashboard from './containers/Dashboard';
 
 function App() {
   const [pulledData, setPulledData] = React.useState({})
@@ -47,8 +49,11 @@ function App() {
                 <Route path="/contact">
                   <ContactUs />
                 </Route>
-                <Route path="/">
+                <Route path="/buildings">
                   <Buildings />
+                </Route>
+                <Route path="/">
+                  <Dashboard />
                 </Route>
               </Switch>
             </div>

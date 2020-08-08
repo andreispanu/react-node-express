@@ -1,16 +1,10 @@
 import React from 'react';
-import Navigation from './Navigation';
-import BuildingsList from './BuildingsList';
+import Map from "../components/Map/Map";
 
 const Dashboard = () => {
   return (
     <div className="main">
-      <div className="left">
-        <Navigation />
-      </div>
-      <div className="right">
-        <BuildingsList />
-      </div>
+      <Map id="mapLondonSilver" />
     </div>
   )
 }

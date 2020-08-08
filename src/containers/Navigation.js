@@ -5,11 +5,11 @@ import SupportList from "../components/Navigation/SupportList.js";
 // SVG
 import BuildingsIcon from "../static/svg/buildingsIcon";
 // CSS
-import navigation from "../static/css/navigation.css";
+import navigation from "../static/css/containers/navigation.css";
 
 const Navigation = () => {
 
-  const [isActive, setIsActive] = useState('buildings');
+  const [isActive, setIsActive] = useState('dashboard');
 
   const activeCheck = (linkName) => {
     setIsActive(linkName)

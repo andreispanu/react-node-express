@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 const NavigationList = (props) => {
 
-  const clickFunc = () => {
-    props.isClicked('buildings');
+  const clickFunc = (item) => {
+    props.isClicked(item);
   }
 
   return (
@@ -15,9 +15,13 @@ const NavigationList = (props) => {
       </div>
       <div className="list-container">
         <ul>
-          <li>Dashboard</li>
           <Link to="/" className="link">
-            <li className={props.active === 'buildings' ? "active" : ""} onClick={() => clickFunc()}>
+            <li className={props.active === 'dashboard' ? "active" : ""} onClick={() => clickFunc('dashboard')}>
+              Dashboard
+            </li>
+          </Link>
+          <Link to="/buildings" className="link">
+            <li className={props.active === 'buildings' ? "active" : ""} onClick={() => clickFunc('buildings')}>
               Buildings
             </li>
           </Link>
