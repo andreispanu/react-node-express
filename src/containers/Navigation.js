@@ -1,5 +1,4 @@
-import React from 'react';
-// import BuildingsList from "./BuildingsList";
+import React, { useState } from 'react';
 import NavigationList from "../components/Navigation/NavigationList.js";
 import SupportList from "../components/Navigation/SupportList.js";
 
@@ -9,6 +8,13 @@ import BuildingsIcon from "../static/svg/buildingsIcon";
 import navigation from "../static/css/navigation.css";
 
 const Navigation = () => {
+
+  const [isActive, setIsActive] = useState('buildings');
+
+  const activeCheck = (linkName) => {
+    setIsActive(linkName)
+  }
+
   return (
     <React.Fragment>
       <div className="navigation-container">
@@ -18,16 +24,15 @@ const Navigation = () => {
           </div>
         </div>
         <div className="navigation-menu">
-          <NavigationList />
+          <NavigationList active={isActive} isClicked={item => activeCheck(item)} />
         </div>
         <div className="navigation-separator-container">
           <div className="navigation-separator" />
         </div>
         <div className="navigation-support">
-          <SupportList />
+          <SupportList active={isActive} isClicked={item => activeCheck(item)} />
         </div>
       </div>
-      {/* <BuildingsList /> */}
     </React.Fragment>
   )
 }

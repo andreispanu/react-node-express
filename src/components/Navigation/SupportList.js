@@ -1,6 +1,13 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
-const SupportList = () => {
+const SupportList = (props) => {
+
+  const clickFunc = () => {
+    props.isClicked('contact')
+  }
+
   return (
     <>
       <div className="list-title">
@@ -9,12 +16,20 @@ const SupportList = () => {
       <div className="list-container">
         <ul>
           <li>Need Help?</li>
-          <li>Contact Us</li>
+          <Link to="/contact" className="link">
+            <li className={props.active === 'contact' ? "active" : ""} onClick={() => clickFunc()}>
+              Contact Us
+            </li>
+          </Link>
           <li>Knowledge Base</li>
         </ul>
       </div>
     </>
   )
 }
+
+SupportList.propTypes = {
+  active: PropTypes.string
+};
 
 export default SupportList;

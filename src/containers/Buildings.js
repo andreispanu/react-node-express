@@ -3,29 +3,22 @@ import { DashboardContext } from '../context/Context';
 import Paper from '@material-ui/core/Paper';
 
 // CSS
-import buildingsList from "../static/css/buildingsList.css";
+import buildings from "../static/css/buildings.css";
 // SVG
 import { ReactComponent as Suitcase } from "../static/svg/suitcase.svg";
 import { ReactComponent as User } from "../static/svg/user.svg";
 
-// Hardcoded image ...
-import image1 from "../static/images/1.png";
 
-
-const BuildingsList = () => {
+const Buildings = () => {
   const data = useContext(DashboardContext);
   const buildingsLoop = () => {
 
     const result = [];
     const buildings = data.buildings;
+
     if (data.buildings !== undefined) {
-
       buildings.item.map(item => {
-
-        console.log(item.image);
-
         let pathToImage = item.image
-
         result.push(
           <div className="building-item" key={item.id}>
             <div className="building-image">
@@ -59,25 +52,17 @@ const BuildingsList = () => {
         )
       })
     }
-
-
-
-
-
     return result;
   }
 
   return (
     <React.Fragment>
-      <Paper>
-        <div className="buildings-container">
-          {buildingsLoop()}
-        </div>
-
-      </Paper>
+      <div className="buildings-container">
+        {buildingsLoop()}
+      </div>
     </React.Fragment>
   )
 
 }
 
-export default BuildingsList;
+export default Buildings;

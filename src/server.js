@@ -29,6 +29,46 @@ const data = {
         offices: "20",
         price: "65"
       },
+      {
+        id: "3",
+        image: "./static/images/3.png",
+        buildingName: "Dome of the Rock",
+        buildingAddress1: "123 Johnson Court ",
+        buildingAddress2: "Roy, UT 84067",
+        users: "564",
+        offices: "46",
+        price: "96"
+      },
+      {
+        id: "4",
+        image: "./static/images/4.png",
+        buildingName: "Lloyd's Building",
+        buildingAddress1: "36 Squaw Creek Dr.",
+        buildingAddress2: "Harleysville, PA 19438",
+        users: "466",
+        offices: "120",
+        price: "120"
+      },
+      {
+        id: "5",
+        image: "./static/images/5.png",
+        buildingName: "Lloyd's Building",
+        buildingAddress1: "36 Squaw Creek Dr.",
+        buildingAddress2: "Harleysville, PA 19438",
+        users: "466",
+        offices: "120",
+        price: "120"
+      },
+      {
+        id: "6",
+        image: "./static/images/6.png",
+        buildingName: "Lloyd's Building",
+        buildingAddress1: "36 Squaw Creek Dr.",
+        buildingAddress2: "Harleysville, PA 19438",
+        users: "466",
+        offices: "120",
+        price: "120"
+      },
     ]
   },
 };

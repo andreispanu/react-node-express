@@ -1,0 +1,30 @@
+:root {
+  --text: #3e3f42;
+  --light: #9ea0a5;
+  --blue: #1665d8;
+  --divider-light: #eaedf3;
+  --default-padding: 8px;
+}
+
+p {
+  font-family: Roboto;
+  margin: 0;
+}
+
+/* Split app into separate areas nav and content */
+.body-container {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.navigation-container {
+  overflow: auto;
+}
+
+.main-container {
+  display: grid;
+  grid-template-rows: 70px 1fr;
+  overflow: auto;
+}

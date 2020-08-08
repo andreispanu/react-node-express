@@ -7,13 +7,14 @@ import {
 } from "react-router-dom";
 
 // Containers
+import Navigation from "./containers/Navigation";
+import Header from "./components/Header/Header";
 import ContactUs from "./containers/ContactUs";
-import Dashboard from "./containers/Dashboard";
-// import Navigation from
+import Buildings from "./containers/Buildings";
 
 // CSS
 import normalizer from "./static/css/normalizer.css";
-
+import app from "./static/css/app.css";
 
 function App() {
   const [pulledData, setPulledData] = React.useState({})
@@ -36,19 +37,24 @@ function App() {
     return (
       <DashboardContext.Provider value={pulledData}>
         <div className="body-container">
-          <
           <Router>
-            <Switch>
-              <Route path="/contact">
-            <ContactUs />
-          </Route>
-          <Route path="/">
-            <Dashboard />
-          </Route>
-            </Switch>
+            <div className="navigation-container">
+              <Navigation />
+            </div>
+            <div className="main-container">
+              <Header />
+              <Switch>
+                <Route path="/contact">
+                  <ContactUs />
+                </Route>
+                <Route path="/">
+                  <Buildings />
+                </Route>
+              </Switch>
+            </div>
           </Router>
-        </div >
-      </DashboardContext.Provider >
+        </div>
+      </DashboardContext.Provider>
     );
   }
 }
