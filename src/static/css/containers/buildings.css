@@ -1,8 +1,19 @@
 .buildings-container {
-  display: flex;
+  /* display: flex; */
+  position: relative;
+}
+
+.building-list {
+  position: absolute;
+  z-index: 3;
 }
 
 .building-map {
+  left: 0;
+  top: 0;
+  position: absolute;
   width: 100%;
+  height: 100%;
   z-index: 2;
 }
+
