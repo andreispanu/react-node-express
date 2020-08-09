@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
+import navigationList from "../../static/css/components/navigationList.css";
 
 const NavigationList = (props) => {
 
@@ -26,7 +27,9 @@ const NavigationList = (props) => {
             </li>
           </Link>
           <li>Posts</li>
-          <li>Conversations</li>
+          <li className="badge-container">
+            Conversations<span className="badge">2</span>
+          </li>
           <li>Amenities</li>
           <li>Tenants</li>
           <li>Performance</li>

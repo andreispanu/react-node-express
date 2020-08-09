@@ -11,6 +11,8 @@ import Navigation from "./containers/Navigation";
 import Header from "./containers/Header";
 import ContactUs from "./containers/ContactUs";
 import Buildings from "./containers/Buildings";
+// SVG
+import { ReactComponent as MenuBar } from "./static/svg/menuBar.svg";
 
 // CSS
 import normalizer from "./static/css/normalizer.css";
@@ -19,7 +21,13 @@ import Map from './components/Map/Map';
 import Dashboard from './containers/Dashboard';
 
 function App() {
-  const [pulledData, setPulledData] = React.useState({})
+  const [pulledData, setPulledData] = React.useState({});
+  const [drawerOpen, setDrawerOpen] = React.useState(false);
+
+  // Mobile Nav
+  const toggleDrawer = () => {
+    setDrawerOpen(!drawerOpen)
+  };
 
   const callAPI = () => {
     fetch("http://localhost:4000/buildings")
@@ -38,9 +46,14 @@ function App() {
   if (pulledData !== {}) {
     return (
       <DashboardContext.Provider value={pulledData}>
-        <div className="body-container">
+        <div className={drawerOpen === true ? "body-container visible" : "body-container"}>
           <Router>
-            <div className="navigation-container">
+            <div className="menuBurgerBar">
+              <span>
+                <MenuBar onClick={toggleDrawer} />
+              </span>
+            </div>
+            <div className="navi-container">
               <Navigation />
             </div>
             <div className="main-container">

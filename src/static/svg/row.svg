@@ -1,0 +1,83 @@
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="100%"
+      height="100%"
+      viewBox="0 0 129 96"
+    >
+      <g
+        fill="#fff"
+        stroke="#cecfd2"
+        strokeWidth="3"
+        data-name="Group 2"
+        transform="translate(-1371 -662.153)"
+      >
+        <g data-name="Rectangle 5" transform="translate(1371 662.153)">
+          <rect width="63" height="45" stroke="none" rx="9"></rect>
+          <rect
+            width="60"
+            height="42"
+            x="1.5"
+            y="1.5"
+            fill="none"
+            rx="7.5"
+          ></rect>
+        </g>
+        <g data-name="Rectangle 6" transform="translate(1371 713.153)">
+          <rect width="63" height="45" stroke="none" rx="9"></rect>
+          <rect
+            width="60"
+            height="42"
+            x="1.5"
+            y="1.5"
+            fill="none"
+            rx="7.5"
+          ></rect>
+        </g>
+        <g data-name="Rectangle 7" transform="translate(1444 662.153)">
+          <rect width="56" height="18" stroke="none" rx="9"></rect>
+          <rect
+            width="53"
+            height="15"
+            x="1.5"
+            y="1.5"
+            fill="none"
+            rx="7.5"
+          ></rect>
+        </g>
+        <g data-name="Rectangle 9" transform="translate(1444 716.49)">
+          <rect width="56" height="18" stroke="none" rx="9"></rect>
+          <rect
+            width="53"
+            height="15"
+            x="1.5"
+            y="1.5"
+            fill="none"
+            rx="7.5"
+          ></rect>
+        </g>
+        <g data-name="Rectangle 8" transform="translate(1444 685.816)">
+          <rect width="56" height="18" stroke="none" rx="9"></rect>
+          <rect
+            width="53"
+            height="15"
+            x="1.5"
+            y="1.5"
+            fill="none"
+            rx="7.5"
+          ></rect>
+        </g>
+        <g data-name="Rectangle 10" transform="translate(1444 740.153)">
+          <rect width="56" height="18" stroke="none" rx="9"></rect>
+          <rect
+            width="53"
+            height="15"
+            x="1.5"
+            y="1.5"
+            fill="none"
+            rx="7.5"
+          ></rect>
+        </g>
+      </g>
+    </svg>
+  

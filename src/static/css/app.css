@@ -1,9 +1,16 @@
+/* Variables */
 :root {
   --text: #3e3f42;
   --light: #9ea0a5;
   --blue: #1665d8;
   --divider-light: #eaedf3;
   --default-padding: 8px;
+}
+
+/* Animations */
+@keyframes opacityIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
 }
 
 p {
@@ -14,9 +21,28 @@ p {
 /* Split app into separate areas nav and content */
 .body-container {
   display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.body-container.visible {
+  display: grid;
   grid-template-columns: 270px 1fr;
   height: 100vh;
   overflow: hidden;
+}
+
+.navi-container {
+  overflow: auto;
+  display: none;
+}
+
+.body-container.visible .navi-container {
+  overflow: auto;
+  display: block;
+  animation-name: opacityIn;
+  animation-duration: 1.5s;
 }
 
 .navigation-container {
@@ -27,4 +53,18 @@ p {
   display: grid;
   grid-template-rows: 70px 1fr;
   overflow: auto;
+}
+
+/* Media Queries */
+/* MD */
+@media only screen and (min-width: 770px) {
+  .body-container {
+    grid-template-columns: 270px 1fr;
+  }
+  .navi-container {
+    display: inline-block;
+  }
+  .menuBurgerBar {
+    display: none;
+  }
 }

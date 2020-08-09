@@ -1,6 +1,4 @@
-import React, { useState, useContext } from 'react';
-import { DashboardContext } from '../context/Context';
-import Paper from '@material-ui/core/Paper';
+import React from 'react';
 import BuildingsList from '../components/BuildingsList/BuildingsList';
 import Map from "../components/Map/Map";
 // CSS
