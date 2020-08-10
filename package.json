@@ -10,13 +10,12 @@
   },
   "keywords": [
     "demo",
-    "mojo",
+    "mojo demo test",
     "app"
   ],
   "author": "Andrei Tiberiu Spanu",
   "license": "ISC",
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
     "babel-install": "^2.1.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",

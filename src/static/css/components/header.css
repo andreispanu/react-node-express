@@ -1,0 +1,134 @@
+/* Variables */
+:root {
+  --text: #3e3f42;
+  --light: #9ea0a5;
+  --blue: #1665d8;
+  --divider-light: #eaedf3;
+  --default-padding: 8px;
+  --container-padding: 30px;
+  --border: #e2e5ed;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Sections */
+
+.options-right-container {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Components */
+
+/* ===Buildings selector */
+.buildings-dropdown {
+  width: 150px;
+  height: 38px;
+  margin-left: 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.buildings-dropdown img {
+  width: 25px;
+  height: 25px;
+}
+
+.buildings-dropdown select {
+  outline: none;
+  -webkit-appearance: none;
+  border: none;
+  width: 150px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: var(--text);
+  padding: var(--default-padding);
+  box-sizing: border-box;
+  background-image: url("../../images/dropdown.png");
+  background-position: right;
+  background-size: 20%;
+  background-repeat: no-repeat;
+}
+
+/*=== Search*/
+.search {
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--default-padding);
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  align-items: center;
+  height: 38px;
+  box-sizing: border-box;
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  color: var(--light);
+}
+
+.search span {
+  width: 25px;
+  height: 25px;
+}
+
+.search input {
+  outline: none;
+  -webkit-appearance: none;
+  border: none;
+}
+
+.header-container .divider {
+  display: inline-block;
+  width: 2px;
+  height: 38px;
+  background-color: var(--divider-light);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* Lang Selector  */
+.language-selector-container  {
+  width: 85px;
+  height: 38px;
+  margin-right: 10px;
+}
+
+.language-selector-container select {
+  outline: none;
+  -webkit-appearance: none;
+  border: none;
+  width: 150px;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: var(--text);
+  padding: var(--default-padding);
+  padding-left: 50px;
+  box-sizing: border-box;
+  background-image: url("../../images/flag.png");
+  background-position: left;
+  background-size: 20%;
+  background-repeat: no-repeat;
+ 
+}
