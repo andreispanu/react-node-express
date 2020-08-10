@@ -25,10 +25,8 @@ This is an app that runs locally, we need to have the local server running in an
 npm run serve
 ```
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+If the console displays this message "Example app listening at http://localhost:4000" the local server should be running. 
+For code changes navigate to the src folder and update as necessary. The css files, svgs and images are located under the Static folder.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
