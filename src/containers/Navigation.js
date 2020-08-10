@@ -4,7 +4,7 @@ import SupportList from "../components/Navigation/SupportList.js";
 // SVG
 import BuildingsIcon from "../static/svg/buildingsIcon";
 // CSS
-import navigation from "../static/css/containers/navigation.css";
+import "../static/css/containers/navigation.css";
 
 const Navigation = () => {
   const [isActive, setIsActive] = useState('dashboard');

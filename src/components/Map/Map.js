@@ -1,9 +1,29 @@
 import React, { useEffect } from 'react';
-import { render } from 'react-dom';
 
 const Map = (props) => {
 
+
+
   useEffect(() => {
+
+    const onScriptLoad = () => {
+      // Custom Silver Map
+      var styledMapType = new window.google.maps.StyledMapType(
+        require('./MapStyles.json')
+      )
+      const map = new window.google.maps.Map(
+        document.getElementById(props.id),
+        {
+          center: { lat: 51.5074, lng: 0.1278 },
+          zoom: 11,
+          disableDefaultUI: true,
+          zoomControl: true
+        }
+      );
+      map.mapTypes.set('styled_map', styledMapType);
+      map.setMapTypeId('styled_map');
+    }
+
     if (!window.google) {
       var s = document.createElement('script');
       s.type = 'text/javascript';
@@ -16,25 +36,9 @@ const Map = (props) => {
     } else {
       onScriptLoad()
     }
-  }, [])
+  }, [props.id])
 
-  const onScriptLoad = () => {
-    // Custom Silver Map
-    var styledMapType = new window.google.maps.StyledMapType(
-      require('./MapStyles.json')
-    )
-    const map = new window.google.maps.Map(
-      document.getElementById(props.id),
-      {
-        center: { lat: 51.5074, lng: 0.1278 },
-        zoom: 11,
-        disableDefaultUI: true,
-        zoomControl: true
-      }
-    );
-    map.mapTypes.set('styled_map', styledMapType);
-    map.setMapTypeId('styled_map');
-  }
+
 
 
 

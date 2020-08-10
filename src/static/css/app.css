@@ -51,13 +51,23 @@ p {
 
 .main-container {
   display: grid;
-  grid-template-rows: 70px 1fr;
+  grid-template-rows: 100px 1fr;
   overflow: auto;
 }
 
 /* Media Queries */
+
+/* SM */
+@media only screen and (min-width: 600px) {
+  .main-container {
+    grid-template-rows: 70px 1fr;
+  }
+}
+
 /* MD */
 @media only screen and (min-width: 770px) {
+  
+
   .body-container {
     grid-template-columns: 270px 1fr;
   }

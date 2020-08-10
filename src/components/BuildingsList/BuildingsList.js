@@ -1,8 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { DashboardContext } from '../../context/Context';
-
 // CSS
-import buildingsList from "../../static/css/components/buildingsList.css";
+import "../../static/css/components/buildingsList.css";
 // SVG
 import { ReactComponent as Suitcase } from "../../static/svg/suitcase.svg";
 import { ReactComponent as User } from "../../static/svg/user.svg";
@@ -23,17 +22,6 @@ const BuildingsList = () => {
     }
   }
 
-  // ==== Output No of buildings
-  const buildingsCount = () => {
-    const result = [];
-    data.buildings !== undefined && (
-      result.push(
-        <p><span className="buildings">{data.buildings.item.length}</span>Buildings</p>
-      )
-    )
-    return result
-  }
-
   // ==== Loop data from db
   const buildingsLoop = () => {
     const result = [];
@@ -41,7 +29,7 @@ const BuildingsList = () => {
 
     if (data.buildings !== undefined) {
       buildings.item.map(item => {
-        let pathToImage = item.image
+
         result.push(
           <div className="building-item" key={item.id + item.buildingName}>
             <div className="building-image">
@@ -74,7 +62,9 @@ const BuildingsList = () => {
             </div>
           </div>
         )
+        return result;
       })
+      return result;
     }
     return result;
   }
@@ -83,7 +73,7 @@ const BuildingsList = () => {
     <div className="slider-container">
       <div className="view-options">
         <div className="buildings-count">
-          {buildingsCount()}
+          {data.buildings !== undefined && (<p><span className="buildings">{data.buildings.item.length}</span>Buildings</p>)}
         </div>
         <div className="switcher">
           <span onClick={() => switchView('row')}>{view === 'row' ? <RowSelected /> : <Row />}</span>

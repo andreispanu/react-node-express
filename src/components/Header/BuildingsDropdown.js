@@ -10,7 +10,7 @@ const BuildingsDropdown = () => {
 
   return (
     <div className="buildings-dropdown">
-      <img src={AllBuildingsImage} alt="buildings image selector" />
+      <img src={AllBuildingsImage} alt="buildings selector" />
       <form>
         <select value={value} onChange={handleChange}>
           <option value="all">All Buildings</option>

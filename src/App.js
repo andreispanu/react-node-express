@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { DashboardContext } from "./context/Context";
 import {
   BrowserRouter as Router,
@@ -15,9 +15,8 @@ import Buildings from "./containers/Buildings";
 import { ReactComponent as MenuBar } from "./static/svg/menuBar.svg";
 
 // CSS
-import normalizer from "./static/css/normalizer.css";
-import app from "./static/css/app.css";
-import Map from './components/Map/Map';
+import "./static/css/normalizer.css";
+import "./static/css/app.css";
 import Dashboard from './containers/Dashboard';
 
 function App() {

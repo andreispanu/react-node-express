@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
-import navigationList from "../../static/css/components/navigationList.css";
+import "../../static/css/components/navigationList.css";
 
 const SupportList = (props) => {
 

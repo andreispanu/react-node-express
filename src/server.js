@@ -3,9 +3,7 @@ const app = express();
 const port = 4000;
 const cors = require("cors");
 
-var fakeData = require("./storage/db");
-
-//Pull fake db data
+//Pull db data
 const data = {
   buildings: {
     item: [
@@ -76,9 +74,6 @@ const data = {
 var async = require("express-async-await");
 var fetch = require("node-fetch");
 
-/*****************************************
- * CORS WHITELIST & OPTIONS
- *****************************************/
 let whitelist = ["http://localhost:3000"];
 let corsOptions = {
   origin: function (origin, callback) {
@@ -90,21 +85,9 @@ let corsOptions = {
   },
 };
 
-/***************************************************
- * USE CORS
- ***************************************************/
 app.use(cors(corsOptions));
 
-/***************************************************
- * AUTH MIDDLEWARE
- ***************************************************/
 app.use(async (req, res, next) => {
-  /***********************************************************
-   * ADD THE AUTHING FUNC IN HERE ON SUCCESS CALL NEXT ELSE
-   * return res.status(403).json({
-        error: "denied"
-      });
-   *********************************************************/
   next();
 });
 

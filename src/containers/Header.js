@@ -1,10 +1,10 @@
 import React from 'react';
-import header from '../static/css/containers/header.css';
+import '../static/css/containers/header.css';
 import BuildingsDropdown from "../components/Header/BuildingsDropdown";
 import LanguageDropdown from "../components/Header/LanguageDropdown";
 import Search from "../components/Header/Search";
 // CSS
-import headerStyles from "../static/css/components/header.css";
+import "../static/css/components/header.css";
 
 const Header = () => {
   return (

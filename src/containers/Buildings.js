@@ -2,11 +2,7 @@ import React from 'react';
 import BuildingsList from '../components/BuildingsList/BuildingsList';
 import Map from "../components/Map/Map";
 // CSS
-import buildings from "../static/css/containers/buildings.css";
-// SVG
-import { ReactComponent as Suitcase } from "../static/svg/suitcase.svg";
-import { ReactComponent as User } from "../static/svg/user.svg";
-
+import "../static/css/containers/buildings.css";
 
 const Buildings = () => {
 

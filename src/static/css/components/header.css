@@ -11,10 +11,11 @@
 
 .header-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
+  align-items: flex-start;
+  justify-content: flex-start;
+  height: 100px;
 }
 
 /* Sections */
@@ -130,5 +131,33 @@
   background-position: left;
   background-size: 20%;
   background-repeat: no-repeat;
- 
 }
+
+/* Media Queries */
+
+/* SM */
+@media only screen and (min-width: 600px) {
+  .header-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: inherit;
+  }
+
+  .buildings-dropdown {
+    width: 150px;
+  }
+  
+  .search {
+    width: 300px;
+  }
+  
+  .language-selector-container  {
+    width: 85px;
+  }
+
+  .language-selector-container select {
+    width: 120px;
+  }
+}
+
