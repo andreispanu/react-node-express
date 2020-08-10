@@ -3,6 +3,7 @@
   --text: #3e3f42;
   --light: #9ea0a5;
   --blue: #1665d8;
+  --white: #ffffff;
   --divider-light: #eaedf3;
   --default-padding: 8px;
   --container-padding: 30px;
@@ -16,6 +17,11 @@
   align-items: flex-start;
   justify-content: flex-start;
   height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 10;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--divider-light);
 }
 
 /* Sections */
@@ -134,7 +140,6 @@
 }
 
 /* Media Queries */
-
 /* SM */
 @media only screen and (min-width: 600px) {
   .header-container {

@@ -56,13 +56,15 @@ function App() {
               <Navigation />
             </div>
             <div className="main-container">
-              <Header />
               <Switch>
                 <Route path="/contact">
                   <ContactUs />
                 </Route>
                 <Route path="/buildings">
-                  <Buildings />
+                  <div className="buildings-main-container">
+                    <Header />
+                    <Buildings />
+                  </div>
                 </Route>
                 <Route path="/">
                   <Dashboard />

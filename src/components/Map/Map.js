@@ -71,7 +71,7 @@ const Map = (props) => {
 
       // Create markers.
       for (var i = 0; i < features.length; i++) {
-        var marker = new window.google.maps.Marker({
+        let marker = new window.google.maps.Marker({
           position: features[i].position,
           icon: icons[features[i].type].icon,
           map: map
@@ -81,10 +81,10 @@ const Map = (props) => {
     }
 
     if (!window.google) {
-      var s = document.createElement('script');
+      let s = document.createElement('script');
       s.type = 'text/javascript';
       s.src = `https://maps.google.com/maps/api/js?key=AIzaSyBqBRGDHQGVUlJPMT6Mbi2B7CLt0qEU-B4`;
-      var x = document.getElementsByTagName('script')[0];
+      let x = document.getElementsByTagName('script')[0];
       x.parentNode.insertBefore(s, x);
       s.addEventListener('load', e => {
         initMap()

@@ -1,10 +1,13 @@
 import React from 'react';
-import Map from "../components/Map/Map";
+
+import "../static/css/containers/dashboard.css";
 
 const Dashboard = () => {
   return (
-    <div className="main">
-      <Map id="mapLondonSilver" />
+    <div className="dashboard-container">
+      <div className="dashboard-content-box">
+        <p><span>Dashboard</span></p>
+      </div>
     </div>
   )
 }
